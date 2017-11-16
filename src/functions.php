@@ -36,7 +36,11 @@ function hasNoExtension(string $filename) {
     return (
         (strpos($filename, '.', 0) === FALSE)
         ||
-        isDotFile($filename)
+        (
+            (substr_count($filename, '.') < 2)
+            &&
+            isDotFile($filename)
+        )
     );
 }
 

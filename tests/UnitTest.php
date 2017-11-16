@@ -41,8 +41,8 @@ class UnitTest extends TestCase
     /**
      * @test
      */
-    public function hasNoExtensionTrueIfDotFileWithExtension() {
-        $this->assertTrue(hasNoExtension(".htaccess.tar.gz"));
+    public function hasNoExtensionFalseIfDotFileWithExtension() {
+        $this->assertFalse(hasNoExtension(".htaccess.tar.gz"));
     }
     
     /**
