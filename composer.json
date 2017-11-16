@@ -1,0 +1,24 @@
+{
+    "name": "lewiscowles/file-extension-utils",
+    "description": "Utilities for dealing with file extensions",
+    "type": "library",
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "ext-xdebug": "*",
+        "phpunit/phpunit": "^6.0"
+    },
+    "autoload": {
+        "psr-4": { "lewiscowles\\Utils\\FileSystem\\Extension\\": "src" },
+        "files": ["src/functions.php"]
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Lewis Cowles",
+            "email": "lewiscowles@me.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
