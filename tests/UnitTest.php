@@ -1,5 +1,7 @@
 <?php
 
+namespace lewiscowles\Utils\FileSystem\Extension;
+
 use function lewiscowles\Utils\FileSystem\Extension\{extensionIsTooSmall,hasNoExtension,dualPartExtension};
 use PHPUnit\Framework\TestCase;
 

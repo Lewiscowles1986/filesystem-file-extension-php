@@ -1,5 +1,7 @@
 <?php
 
+namespace lewiscowles\Utils\FileSystem\Extension;
+
 use function lewiscowles\Utils\FileSystem\Extension\{fixExtensionIfNeeded,getExtensionFromFilename};
 use PHPUnit\Framework\TestCase;
 
