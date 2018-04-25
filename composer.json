@@ -13,6 +13,9 @@
         "psr-4": { "lewiscowles\\Utils\\FileSystem\\Extension\\": "src" },
         "files": ["src/functions.php"]
     },
+    "autoload-dev": {
+        "psr-4": { "lewiscowles\\Utils\\FileSystem\\Extension\\": "tests" }
+    },
     "license": "GPL-3.0",
     "authors": [
         {
