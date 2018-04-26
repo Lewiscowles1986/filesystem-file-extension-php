@@ -1,6 +1,6 @@
 <?php
 
-namespace lewiscowles\Utils\FileSystem\Extension;
+namespace lewiscowles\Utils\FileSystem\Extension\Tests;
 
 use function lewiscowles\Utils\FileSystem\Extension\{extensionIsTooSmall,hasNoExtension,dualPartExtension};
 use PHPUnit\Framework\TestCase;
