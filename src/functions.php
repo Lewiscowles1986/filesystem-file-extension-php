@@ -46,9 +46,11 @@ function hasNoExtension(string $filename) {
 
 function dualPartExtension(string $extension) {
     return in_array($extension, [
-        'gz',
+        'Z',
+	'gz',
         'xz',
         'bz2',
+	'lzma',
     ], true);
 }
 
