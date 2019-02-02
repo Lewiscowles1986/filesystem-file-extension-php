@@ -14,3 +14,7 @@ matrix:
 
 before_script:
     - composer install
+    - mkdir -p tests/reports
+
+after_script:
+  - travis_retry php bin/php-coveralls -v -x tests/reports/clover.xml -o tests/reports/coveralls.json
