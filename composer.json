@@ -24,5 +24,8 @@
             "email": "lewiscowles@me.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "bin-dir": "bin/"
+    }
 }
