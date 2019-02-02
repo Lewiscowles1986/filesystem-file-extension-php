@@ -13,8 +13,16 @@ matrix:
         - php: nightly
 
 before_script:
-    - composer install
-    - mkdir -p tests/reports
+  - composer update
+  - composer install --dev --optimize-autoloader
+  - mkdir -p tests/reports
+
+script:
+  - phpunit --verbose
 
 after_script:
   - travis_retry php bin/php-coveralls -v -x tests/reports/clover.xml -o tests/reports/coveralls.json
+
+cache:
+  directories:
+    - vendor
