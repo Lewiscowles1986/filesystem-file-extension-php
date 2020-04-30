@@ -2,28 +2,12 @@
 
 namespace lewiscowles\Utils\FileSystem\Extension\Tests\Legacy;
 
-use function lewiscowles\Utils\FileSystem\Extension\{extensionIsTooSmall,hasNoExtension,dualPartExtension};
+use function lewiscowles\Utils\FileSystem\Extension\{hasNoExtension,dualPartExtension};
 use PHPUnit\Framework\TestCase;
 
 
 class UnitTest extends TestCase
 {
-    // Extension Size Tests
-
-    /**
-     * @test
-     */
-    public function extensionIsTooSmallIfEmpty() {
-        $this->assertTrue(extensionIsTooSmall(""));
-    }
-
-    /**
-     * @test
-     */
-    public function extensionIsNotTooSmallIfNotEmpty() {
-        $this->assertFalse(extensionIsTooSmall("1"));
-    }
-
     // Has-Extension Tests
 
     /**
