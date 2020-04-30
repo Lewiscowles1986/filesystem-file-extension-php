@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <logging>
-        <log type="coverage-html" target="tests/reports"/>
-        <log type="coverage-clover" target="tests/reports/clover.xml"/>
+        <log type="coverage-html" target="tests/reports" />
+        <log type="coverage-clover" target="tests/reports/clover.xml" />
     </logging>
     <testsuites>
-        <testsuite name="Lewiscowles1986/filesystem-file-extension-php">
+        <testsuite name="Unit tests">
+            <directory suffix="Test.php">tests/unit</directory>
+        </testsuite>
+        <testsuite name="Integration tests">
+            <directory suffix="Test.php">tests/integration</directory>
+        </testsuite>
+        <testsuite name="Legacy Tests">
             <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
