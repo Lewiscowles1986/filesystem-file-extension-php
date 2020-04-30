@@ -9,21 +9,21 @@ use PHPUnit\Framework\TestCase;
 class IntegrationTest extends TestCase
 {
     // Valid-Extension Tests
-    
+
     /**
      * @test
      */
     public function emptyExtensionFromFilenameReturnsEmptyExtension() {
         $this->assertEquals(getExtensionFromFilename(""), "");
     }
-    
+
     /**
      * @test
      */
     public function extensionFromFilenameReturnsBothPartsIfDualExtension() {
         $this->assertEquals(getExtensionFromFilename("test.tar.gz"), "tar.gz");
     }
-    
+
     /**
      * @test
      */
