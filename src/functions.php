@@ -4,7 +4,7 @@ namespace lewiscowles\Utils\FileSystem\Extension;
 
 function fixExtensionIfNeeded(string $originalExtension, string $filename) {
     if( extensionIsTooSmall($originalExtension) ) {
-			return getExtensionFromFilename($filename);
+        return getExtensionFromFilename($filename);
     }
     return $originalExtension;
 }
@@ -47,10 +47,10 @@ function hasNoExtension(string $filename) {
 function dualPartExtension(string $extension) {
     return in_array($extension, [
         'Z',
-	'gz',
+        'gz',
         'xz',
         'bz2',
-	'lzma',
+        'lzma',
     ], true);
 }
 
