@@ -7,12 +7,12 @@ namespace lewiscowles\Utils\FileSystem\Extension;
 
 
 /**
- * extensionIsTooSmall returns true for zero-length file extension
+ * isExtensionTooShort returns true for zero-length file extension
  *
  * @param string $extension a file name extension
  * @return bool
  */
-function extensionIsTooSmall(string $extension) : bool {
+function isExtensionTooShort(string $extension) : bool {
     return ( strlen($extension) < 1 );
 }
 

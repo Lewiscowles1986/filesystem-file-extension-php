@@ -14,7 +14,7 @@ namespace lewiscowles\Utils\FileSystem\Extension;
  * @return string
  */
 function fixExtensionIfNeeded(string $originalExtension, string $filename) : string {
-    if( extensionIsTooSmall($originalExtension) ) {
+    if( isExtensionTooShort($originalExtension) ) {
         return getExtensionFromFilename($filename);
     }
     return $originalExtension;
