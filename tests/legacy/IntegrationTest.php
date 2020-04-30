@@ -2,35 +2,12 @@
 
 namespace lewiscowles\Utils\FileSystem\Extension\Tests\Legacy;
 
-use function lewiscowles\Utils\FileSystem\Extension\{fixExtensionIfNeeded,getExtensionFromFilename};
+use function lewiscowles\Utils\FileSystem\Extension\fixExtensionIfNeeded;
 use PHPUnit\Framework\TestCase;
 
 
 class IntegrationTest extends TestCase
 {
-    // Valid-Extension Tests
-
-    /**
-     * @test
-     */
-    public function emptyExtensionFromFilenameReturnsEmptyExtension() {
-        $this->assertEquals(getExtensionFromFilename(""), "");
-    }
-
-    /**
-     * @test
-     */
-    public function extensionFromFilenameReturnsBothPartsIfDualExtension() {
-        $this->assertEquals(getExtensionFromFilename("test.tar.gz"), "tar.gz");
-    }
-
-    /**
-     * @test
-     */
-    public function extensionFromFilenameReturnsSingularExtension() {
-        $this->assertEquals(getExtensionFromFilename("test.docx"), "docx");
-    }
-
     // Fix-Extenson if Needed Tests
 
     /**
