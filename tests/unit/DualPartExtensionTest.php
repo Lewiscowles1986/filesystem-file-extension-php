@@ -1,12 +1,12 @@
 <?php
 
-namespace lewiscowles\Utils\FileSystem\Extension\Tests\Legacy;
+namespace lewiscowles\Utils\FileSystem\Extension\Tests\Unit;
 
 use function lewiscowles\Utils\FileSystem\Extension\dualPartExtension;
 use PHPUnit\Framework\TestCase;
 
 
-class UnitTest extends TestCase
+class DualPartExtensionTest extends TestCase
 {
     // Dual Part Extension Tests
 
