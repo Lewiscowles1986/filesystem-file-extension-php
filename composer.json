@@ -15,7 +15,8 @@
             "lewiscowles\\Utils\\FileSystem\\Extension\\": "src"
         },
         "files": [
-            "src/functions.php"
+            "src/functions.php",
+            "src/utils.php"
         ]
     },
     "autoload-dev": {

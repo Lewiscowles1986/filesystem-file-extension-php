@@ -1,19 +1,30 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace lewiscowles\Utils\FileSystem\Extension;
 
-function fixExtensionIfNeeded(string $originalExtension, string $filename) {
+
+/**
+ * fixExtensionIfNeeded returns extension from an extension and filename
+ *
+ * @param string $originalExtension
+ * @param string $filename
+ * @return string
+ */
+function fixExtensionIfNeeded(string $originalExtension, string $filename) : string {
     if( extensionIsTooSmall($originalExtension) ) {
         return getExtensionFromFilename($filename);
     }
     return $originalExtension;
 }
 
-function extensionIsTooSmall(string $extension) {
-    return ( strlen($extension) < 1 );
-}
-
-function getExtensionFromFilename(string $filename) {
+/**
+ * getExtensionFromFilename returns a file extension from a filename
+ *
+ * It takes into account dotfiles but returns true if they have an extension
+ * @param string $filename
+ * @return string
+ */
+function getExtensionFromFilename(string $filename) : string {
     $Parts = explode('.', $filename);
     $LowerParts = array_map('strtolower', $Parts);
     $LastPart = array_pop($LowerParts);
@@ -28,11 +39,14 @@ function getExtensionFromFilename(string $filename) {
     return $LastPart;
 }
 
-function isDotFile(string $filename) {
-    return (strpos($filename, '.', 0) === 0);
-}
-
-function hasNoExtension(string $filename) {
+/**
+ * hasNoExtension returns if a file has no file extension
+ *
+ * It takes into account dotfiles but returns true if they have an extension
+ * @param string $filename
+ * @return bool
+ */
+function hasNoExtension(string $filename) : bool {
     return (
         (strpos($filename, '.', 0) === FALSE)
         ||
@@ -43,14 +57,3 @@ function hasNoExtension(string $filename) {
         )
     );
 }
-
-function isDualPartExtension(string $extension) {
-    return in_array($extension, [
-        'Z',
-        'gz',
-        'xz',
-        'bz2',
-        'lzma',
-    ], true);
-}
-
