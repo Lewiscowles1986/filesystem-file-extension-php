@@ -1,12 +1,12 @@
 <?php
 
-namespace lewiscowles\Utils\FileSystem\Extension\Tests\Legacy;
+namespace lewiscowles\Utils\FileSystem\Extension\Tests\Integration;
 
 use function lewiscowles\Utils\FileSystem\Extension\fixExtensionIfNeeded;
 use PHPUnit\Framework\TestCase;
 
 
-class IntegrationTest extends TestCase
+class FixExtensionIfNeededTest extends TestCase
 {
     // Fix-Extenson if Needed Tests
 
