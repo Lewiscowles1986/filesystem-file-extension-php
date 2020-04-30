@@ -2,31 +2,31 @@
 
 namespace lewiscowles\Utils\FileSystem\Extension\Tests\Unit;
 
-use function lewiscowles\Utils\FileSystem\Extension\dualPartExtension;
+use function lewiscowles\Utils\FileSystem\Extension\isDualPartExtension;
 use PHPUnit\Framework\TestCase;
 
 
-class DualPartExtensionTest extends TestCase
+class IsDualPartExtensionTest extends TestCase
 {
     /**
      * @test
      */
     public function notDualPartExtensionWithNoExtension() {
-        $this->assertFalse(dualPartExtension("filewithnoextension"));
+        $this->assertFalse(isDualPartExtension("filewithnoextension"));
     }
 
     /**
      * @test
      */
     public function notDualPartExtensionWithSingularExtension() {
-        $this->assertFalse(dualPartExtension("test.docx"));
+        $this->assertFalse(isDualPartExtension("test.docx"));
     }
 
     /**
      * @test
      */
     public function isDualPartExtensionWithGZipTarball() {
-        $this->assertTrue(dualPartExtension("gz"));
+        $this->assertTrue(isDualPartExtension("gz"));
     }
 }
 

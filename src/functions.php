@@ -18,7 +18,7 @@ function getExtensionFromFilename(string $filename) {
     $LowerParts = array_map('strtolower', $Parts);
     $LastPart = array_pop($LowerParts);
 
-    if( dualPartExtension($LastPart) ) {
+    if( isDualPartExtension($LastPart) ) {
         $PenultimatePart = array_pop($LowerParts);
         return "{$PenultimatePart}.{$LastPart}";
     } elseif( hasNoExtension($filename) ) {
@@ -44,7 +44,7 @@ function hasNoExtension(string $filename) {
     );
 }
 
-function dualPartExtension(string $extension) {
+function isDualPartExtension(string $extension) {
     return in_array($extension, [
         'Z',
         'gz',
