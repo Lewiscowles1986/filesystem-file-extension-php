@@ -1,6 +1,6 @@
 <?php
 
-namespace lewiscowles\Utils\FileSystem\Extension\Tests\Unit;
+namespace lewiscowles\Utils\FileSystem\Extension\Tests\Integration;
 
 use function lewiscowles\Utils\FileSystem\Extension\hasNoExtension;
 use PHPUnit\Framework\TestCase;
