@@ -29,5 +29,11 @@ class FixExtensionIfNeededTest extends TestCase
         $this->assertEquals(fixExtensionIfNeeded("", "archive.tar.gz"), "tar.gz");
     }
 
+    /**
+     * @test
+     */
+    public function extensionNotChangedIfValidExtensionProvided() {
+        $this->assertEquals(fixExtensionIfNeeded("zip", "html-documentation.zip"), "zip");
+    }
 }
 
