@@ -8,8 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class FixExtensionIfNeededTest extends TestCase
 {
-    // Fix-Extenson if Needed Tests
-
     /**
      * @test
      */

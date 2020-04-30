@@ -8,8 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class GetExtensionFromFilenameTest extends TestCase
 {
-    // Valid-Extension Tests
-
     /**
      * @test
      */

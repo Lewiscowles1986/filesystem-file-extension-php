@@ -8,8 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class DualPartExtensionTest extends TestCase
 {
-    // Dual Part Extension Tests
-
     /**
      * @test
      */
