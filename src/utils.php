@@ -1,4 +1,7 @@
 <?php declare(strict_types=1);
+/**
+ * @file
+ */
 
 namespace lewiscowles\Utils\FileSystem\Extension;
 
@@ -6,7 +9,7 @@ namespace lewiscowles\Utils\FileSystem\Extension;
 /**
  * extensionIsTooSmall returns true for zero-length file extension
  *
- * @param string $extension
+ * @param string $extension a file name extension
  * @return bool
  */
 function extensionIsTooSmall(string $extension) : bool {
@@ -15,9 +18,10 @@ function extensionIsTooSmall(string $extension) : bool {
 
 /**
  * isDualPartExtension returns true for supported dual-part extensions
+ *
  * Examples include compressed variants of files
  *
- * @param string $extension
+ * @param string $extension a file name extension
  * @return bool
  */
 function isDualPartExtension(string $extension) : bool {
@@ -33,7 +37,7 @@ function isDualPartExtension(string $extension) : bool {
 /**
  * isDotFile returns true for filenames beginning with a dot / period character
  *
- * @param string $filename
+ * @param string $filename a filename (note: not path)
  * @return bool
  */
 function isDotFile(string $filename) : bool {

@@ -1,4 +1,7 @@
 <?php declare(strict_types=1);
+/**
+ * @file
+ */
 
 namespace lewiscowles\Utils\FileSystem\Extension;
 
@@ -6,8 +9,8 @@ namespace lewiscowles\Utils\FileSystem\Extension;
 /**
  * fixExtensionIfNeeded returns extension from an extension and filename
  *
- * @param string $originalExtension
- * @param string $filename
+ * @param string $originalExtension the extension of the filename
+ * @param string $filename the original filename (note: not path)
  * @return string
  */
 function fixExtensionIfNeeded(string $originalExtension, string $filename) : string {
@@ -21,7 +24,8 @@ function fixExtensionIfNeeded(string $originalExtension, string $filename) : str
  * getExtensionFromFilename returns a file extension from a filename
  *
  * It takes into account dotfiles but returns true if they have an extension
- * @param string $filename
+ *
+ * @param string $filename a filename (note: not path)
  * @return string
  */
 function getExtensionFromFilename(string $filename) : string {
@@ -43,7 +47,8 @@ function getExtensionFromFilename(string $filename) : string {
  * hasNoExtension returns if a file has no file extension
  *
  * It takes into account dotfiles but returns true if they have an extension
- * @param string $filename
+ *
+ * @param string $filename a filename (note: not path)
  * @return bool
  */
 function hasNoExtension(string $filename) : bool {
