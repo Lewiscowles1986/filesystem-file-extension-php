@@ -1,6 +1,6 @@
 <?php
 
-namespace lewiscowles\Utils\FileSystem\Extension\Tests;
+namespace lewiscowles\Utils\FileSystem\Extension\Tests\Legacy;
 
 use function lewiscowles\Utils\FileSystem\Extension\{fixExtensionIfNeeded,getExtensionFromFilename};
 use PHPUnit\Framework\TestCase;
